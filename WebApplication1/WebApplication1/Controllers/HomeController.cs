@@ -20,9 +20,10 @@ namespace WebApplication1.Controllers
         }
 
         [HttpPost]
-        public string Index(string name)
+        public IActionResult Index(string name)
         {
-            return $"Hello, {name}!";
+            ViewBag.Name = $"Hello, {name}!";
+            return View();
         }
 
         public IActionResult Privacy()
